@@ -52,7 +52,7 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
+        <button type="button" class="main-button" data-modal-open>Заказать услугу</button>
       </section>
 
       <section class="section">
@@ -376,6 +376,7 @@
             </ul>
           </address>
         </div>
+
         <div class="connect-block">
           <b class="title">Присоединяйтесь</b>
           <ul class="social-list">
@@ -409,6 +410,14 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription-block">
+          <b class="title">Подпишитесь на рассылку</b>
+          <div class="subscription-field">
+            <input type="email" name="mail" class="mail" placeholder="E-mail" />
+            <button type="button" class="main-button">Подписаться</button>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -424,52 +433,56 @@
         <form class="contacts-form js-form">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-          <div class="form-field">
-            <label for="name" class="input-label"
+          <!-- <div class="form-field"> -->
+          <label for="name" class="input-label"
             >Имя
-              <div class="input-area">
-                <!-- <svg>
+            <div class="input-area">
+              <!-- <svg>
                   <use href=""></use>
                 </svg> -->
-                <input type="text" name="name" id="name" class="input-field" />
-              </div>
-            </label>
-          </div>
-
-          <div class="form-field">
-            <label for="phone" class="input-label"
-            >Телефон
-              <div class="input-area">
-                <input type="phone" name="phone" id="phone" class="input-field" placeholder="Вася" />
-              </div>
+              <input type="text" name="name" id="name" class="input-field" />
+            </div>
           </label>
-          </div>
+          <!-- </div> -->
 
-          <div class="form-field">
-            <label for="email" class="input-label"
+          <!-- <div class="form-field"> -->
+          <label for="phone" class="input-label"
+            >Телефон
+            <div class="input-area">
+              <input type="phone" name="phone" id="phone" class="input-field" placeholder="Вася" />
+            </div>
+          </label>
+          <!-- </div> -->
+
+          <!-- <div class="form-field"> -->
+          <label for="email" class="input-label"
             >Почта
-              <div class="input-area">
-                <input type="email" name="email" id="email" class="input-field" />
-              </div>
-            </label>
-          </div>
+            <div class="input-area">
+              <input type="email" name="email" id="email" class="input-field" />
+            </div>
+          </label>
+          <!-- </div> -->
 
-          <div class="form-field textarea">
-            <label for="comment" class="input-label"
+          <!-- <div class="form-field textarea"> -->
+          <label for="comment" class="input-label"
             >Комментарий
-              <div class="input-area">
-                <textarea name="comment" id="comment" class="input-field" placeholder="Введите текст"></textarea>
-              </div>
-            </label>
-          </div>
+            <!-- <div class="input-area"> -->
+            <textarea
+              name="comment"
+              id="comment"
+              class="textarea-field"
+              placeholder="Введите текст"
+            ></textarea>
+            <!-- </div> -->
+          </label>
+          <!-- </div> -->
 
           <div class="agree-field">
-            <label><input type="checkbox">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+            <label><input type="checkbox" />Соглашаюсь с рассылкой и принимаю </label>
+            <a href="" class="agree-link">Условия договора</a>
           </div>
 
-          <button type="submit" class="submit-button">Отправить</button>
-
-
+          <button type="submit" class="main-button">Отправить</button>
 
           <!-- <label for="name" class="input-label"
             >Имя
@@ -492,7 +505,6 @@
             </div>
           </label> -->
 
-
           <!-- <div class="form-field">
             <label for="name">Им'я</label>
             <input
@@ -503,9 +515,7 @@
               autofocus
             />
           </div> -->
-
         </form>
-
       </div>
     </div>
 

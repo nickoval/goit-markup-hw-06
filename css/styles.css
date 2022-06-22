@@ -20,6 +20,8 @@
     --backdrop-bg-color: rgba(0, 0, 0, 0.2);
     --close-button-border-color: rgba(0, 0, 0, 0.1);
     --placeholder-text-color: rgba(117, 117, 117, 0.5);
+    --modal-input-bg-color: rgba(33, 33, 33, 0.2);
+    --footer-input-bg-color: rgba(255, 255, 255, 0.3);
 
     --main-font: 'Roboto', sans-serif;
     --title-font: 'Raleway', sans-serif;
@@ -76,6 +78,29 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.main-button {
+    min-width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-button:hover,
+.main-button:focus {
+    background-color: var(--accent-2-color);
+}
+
 
 
 /* !!!    Хэдэр начало   !!! */
@@ -242,10 +267,9 @@ nav {
     color: var(--white-color);
 }
 
-.hero-button {
+/* .hero-button {
     min-width: 200px;
     height: 50px;
-    /* padding: 8px 30px; */
     cursor: pointer;
     font-family: inherit;
     font-weight: 700;
@@ -263,7 +287,7 @@ nav {
 .hero-button:hover,
 .hero-button:focus {
     background-color: var(--accent-2-color);
-}
+} */
 /* !!!   Секция Герой конец   !!! */
 
 
@@ -529,7 +553,7 @@ nav {
     color: var(--footer-contacts-color);
 }
 
-.connect-block .title {
+.connect-block .title, .subscription-block .title {
     display: block;
     font-weight: 700;
         /* font-size: 14px; */
@@ -548,6 +572,33 @@ nav {
 .page-footer .social-link:hover,
 .page-footer .social-link:focus {
     background-color: var(--accent-color);
+}
+
+.subscription-block {
+    margin-left: auto;
+
+}
+
+.subscription-field {
+    display: flex;
+}
+
+.subscription-field input {
+    display: block;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+    border: 1px solid var(--footer-input-bg-color);
+    border-radius: 4px;
+    padding-left: 16px;
+    color: var(--white-color);
+    background-color: transparent;
+}
+
+.subscription-field input::placeholder {
+    color: var(--footer-contacts-color);
 }
 
 /* !!!    Футэр конец   !!! */
@@ -741,54 +792,68 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
-    margin-bottom: 12px;
+    /* margin: 0 auto; */
+    /* margin-bottom: 12px; */
     
     color: var(--title-text-color);
 }
 
-.form-field {
+/* .form-field {
     margin-bottom: 10px;
     text-align-last: left;
-}
+} */
 
-.form-field.textarea {
+/* .form-field.textarea {
     margin-bottom: 20px;
-}
+} */
 
-.form-field label {
+.input-label {
+    display: block;
     font-size: 12px;
     line-height: 1.167;
     letter-spacing: 0.01em;
+    text-align: left;
+    margin-top: 12px;
     /* margin-bottom: 10px; */
 }
 
-/* .input-area {
+.input-label + .input-label {
+    margin-top: 10px;
+}
+
+.input-area {
     margin-top: 4px;
-} */
+}
 
 .input-area input {
+    display: block;
     width: 100%;
     font-size: 16px;
     height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--modal-input-bg-color);
     border-radius: 4px;
     padding-left: 42px;
+    background-color: transparent;
 } 
 .input-area textarea::placeholder {
     color: var(--placeholder-text-color);
 } 
 
-.input-area textarea {
+.input-label textarea {
+    display: block;
+    margin-top: 4px;
     resize: none;
     width: 100%;
     font-size: 16px;
     height: 120px;
     padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--modal-input-bg-color);
     border-radius: 4px;
+    background-color: transparent;
 } 
 
 .agree-field {
+    margin-top: 20px;
     margin-bottom: 30px;
     /* margin-left: 14px; */
 }
@@ -796,10 +861,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 .agree-field input {
     margin-right: 7px;
 }
+.agree-link {
+    color: var(--accent-color);
+}
 
-.submit-button {
-    /* margin-left: auto;
-    margin-right: auto; */
+/* .submit-button {
     min-width: 200px;
     height: 50px;
     cursor: pointer;
@@ -811,10 +877,14 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     border-radius: 4px;
     border: 1px solid transparent;
     color: var(--white-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: var(--accent-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.submit-button:hover, .submit-button:focus {
+    background-color: var(--accent-2-color);
+} */
 
 
 /* 
