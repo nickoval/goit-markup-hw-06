@@ -19,6 +19,7 @@
     --example-popup-bg-color: rgba(33, 150, 243, 0.9);
     --backdrop-bg-color: rgba(0, 0, 0, 0.2);
     --close-button-border-color: rgba(0, 0, 0, 0.1);
+    --placeholder-text-color: rgba(117, 117, 117, 0.5);
 
     --main-font: 'Roboto', sans-serif;
     --title-font: 'Raleway', sans-serif;
@@ -244,7 +245,7 @@ nav {
 .hero-button {
     min-width: 200px;
     height: 50px;
-    padding: 8px 30px;
+    /* padding: 8px 30px; */
     cursor: pointer;
     font-family: inherit;
     font-weight: 700;
@@ -253,6 +254,7 @@ nav {
     letter-spacing: 0.06em;
     border-radius: 4px;
     border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: var(--white-color);
     background-color: var(--accent-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -727,13 +729,15 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     fill: currentColor;
 }
 
+
+/* Контактная Форма */
 .contacts-form {
     padding: 40px;
+    text-align: center;
 }
 
 .form-title {
     display: inline-block;
-    /* font-weight: 700; */
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
@@ -742,6 +746,78 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     color: var(--title-text-color);
 }
 
+.form-field {
+    margin-bottom: 10px;
+    text-align-last: left;
+}
+
+.form-field.textarea {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    /* margin-bottom: 10px; */
+}
+
+/* .input-area {
+    margin-top: 4px;
+} */
+
+.input-area input {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+} 
+.input-area textarea::placeholder {
+    color: var(--placeholder-text-color);
+} 
+
+.input-area textarea {
+    resize: none;
+    width: 100%;
+    font-size: 16px;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+} 
+
+.agree-field {
+    margin-bottom: 30px;
+    /* margin-left: 14px; */
+}
+
+.agree-field input {
+    margin-right: 7px;
+}
+
+.submit-button {
+    /* margin-left: auto;
+    margin-right: auto; */
+    min-width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* 
 .input-area {
 
 }
@@ -757,5 +833,25 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-}
+} */
+
+
+
+/* .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    margin-bottom: 5px;
+  }
+  
+  .form-field input {
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+  } */
+
 /* Модальное окно конец */

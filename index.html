@@ -424,7 +424,54 @@
         <form class="contacts-form js-form">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-          <label for="name" class="input-label"
+          <div class="form-field">
+            <label for="name" class="input-label"
+            >Имя
+              <div class="input-area">
+                <!-- <svg>
+                  <use href=""></use>
+                </svg> -->
+                <input type="text" name="name" id="name" class="input-field" />
+              </div>
+            </label>
+          </div>
+
+          <div class="form-field">
+            <label for="phone" class="input-label"
+            >Телефон
+              <div class="input-area">
+                <input type="phone" name="phone" id="phone" class="input-field" placeholder="Вася" />
+              </div>
+          </label>
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="input-label"
+            >Почта
+              <div class="input-area">
+                <input type="email" name="email" id="email" class="input-field" />
+              </div>
+            </label>
+          </div>
+
+          <div class="form-field textarea">
+            <label for="comment" class="input-label"
+            >Комментарий
+              <div class="input-area">
+                <textarea name="comment" id="comment" class="input-field" placeholder="Введите текст"></textarea>
+              </div>
+            </label>
+          </div>
+
+          <div class="agree-field">
+            <label><input type="checkbox">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+          </div>
+
+          <button type="submit" class="submit-button">Отправить</button>
+
+
+
+          <!-- <label for="name" class="input-label"
             >Имя
             <div class="input-area">
               <input type="text" name="name" id="name" class="input-field" />
@@ -443,8 +490,22 @@
             <div class="input-area">
               <input type="email" name="email" id="email" class="input-field" />
             </div>
-          </label>
+          </label> -->
+
+
+          <!-- <div class="form-field">
+            <label for="name">Им'я</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Иван Иваныч"
+              autofocus
+            />
+          </div> -->
+
         </form>
+
       </div>
     </div>
 
