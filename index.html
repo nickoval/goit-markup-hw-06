@@ -415,17 +415,25 @@
           <b class="title">Подпишитесь на рассылку</b>
           <div class="subscription-field">
             <input type="email" name="mail" class="mail" placeholder="E-mail" />
-            <button type="button" class="main-button">Подписаться</button>
+            <button type="button" class="main-button footer-button">
+              Подписаться
+              <svg class="icon-out" width="24" height="24" aria-label="">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+              <svg class="icon-in" width="24" height="24" aria-label="">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
-      <!-- <div class="backdrop is-hidden" data-modal> -->
+    <!-- <div class="backdrop" data-modal> -->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-modal-button" data-modal-close>
-          <svg class="icon" width="18" height="18" aria-label="close">
+          <svg class="icon" width="24" height="24" aria-label="close">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -437,10 +445,10 @@
           <label for="name" class="input-label"
             >Имя
             <div class="input-area">
-              <!-- <svg>
-                  <use href=""></use>
-                </svg> -->
               <input type="text" name="name" id="name" class="input-field" />
+              <svg class="input-icon" width="18" height="18" aria-label="">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
             </div>
           </label>
           <!-- </div> -->
@@ -449,7 +457,10 @@
           <label for="phone" class="input-label"
             >Телефон
             <div class="input-area">
-              <input type="phone" name="phone" id="phone" class="input-field" placeholder="Вася" />
+              <input type="phone" name="phone" id="phone" class="input-field" />
+              <svg class="input-icon" width="18" height="18" aria-label="">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
             </div>
           </label>
           <!-- </div> -->
@@ -459,6 +470,9 @@
             >Почта
             <div class="input-area">
               <input type="email" name="email" id="email" class="input-field" />
+              <svg class="input-icon" width="18" height="18" aria-label="">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
             </div>
           </label>
           <!-- </div> -->
@@ -478,8 +492,15 @@
           <!-- </div> -->
 
           <div class="agree-field">
-            <label><input type="checkbox" />Соглашаюсь с рассылкой и принимаю </label>
-            <a href="" class="agree-link">Условия договора</a>
+            <label class="agree-field-label"
+              ><input type="checkbox" class="checkbox" name="agree" />
+              <span class="check-icon-field">
+                <svg class="chec-icon" width="16" height="15" aria-label="check-icon">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg> </span
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="agree-link">Условия договора</a>
+            </label>
           </div>
 
           <button type="submit" class="main-button">Отправить</button>

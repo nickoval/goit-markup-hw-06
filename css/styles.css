@@ -507,6 +507,10 @@ nav {
 .clients-list .client-link:hover {
     color: var(--accent-color);
 }
+.clients-list .client-link:focus {
+    color: var(--accent-color);
+    outline: none;
+}
 
 .client-icon {
     fill: currentColor
@@ -600,6 +604,44 @@ nav {
 .subscription-field input::placeholder {
     color: var(--footer-contacts-color);
 }
+
+.footer-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    overflow: hidden;
+}
+
+.footer-button:hover,
+.footer-button:focus {
+    background-color: var(--accent-2-color);
+}
+
+.footer-button .icon-out {
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-button .icon-in {
+    position: absolute;
+    right: 27px ;
+    transform: translate(-40px, 40px);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.footer-button:hover .icon-out,
+.footer-button:focus .icon-out {
+    transform: translate(40px, -40px);
+}
+
+.footer-button:hover .icon-in,
+.footer-button:focus .icon-in {
+    transform: translateY(0);
+}
+
 
 /* !!!    Футэр конец   !!! */
 
@@ -792,8 +834,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
-    /* margin: 0 auto; */
-    /* margin-bottom: 12px; */
     
     color: var(--title-text-color);
 }
@@ -822,10 +862,12 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 
 .input-area {
+    position: relative;
     margin-top: 4px;
 }
 
-.input-area input {
+/* .input-area  */
+.input-field {
     display: block;
     width: 100%;
     font-size: 16px;
@@ -834,94 +876,109 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     border-radius: 4px;
     padding-left: 42px;
     background-color: transparent;
-} 
-.input-area textarea::placeholder {
-    color: var(--placeholder-text-color);
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
-.input-label textarea {
+.input-field:hover, .input-field:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    fill: var(--title-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:hover + .input-icon {
+    fill: var(--accent-color);
+}
+
+/* .input-field:focus-within {
+    outline: none;
+    border-color: var(--accent-color);
+} */
+
+
+/* .input-label  */
+.textarea-field {
     display: block;
     margin-top: 4px;
     resize: none;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.143;
     height: 120px;
     padding: 12px 16px;
     border: 1px solid var(--modal-input-bg-color);
     border-radius: 4px;
     background-color: transparent;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
+
+.textarea-field:hover,
+.textarea-field:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.textarea-field::placeholder {
+    font-size: 12px;
+    color: var(--placeholder-text-color);
+    transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-field:hover::placeholder,
+.textarea-field:focus::placeholder {
+    font-size: 14px;
+}
 
 .agree-field {
     margin-top: 20px;
     margin-bottom: 30px;
     /* margin-left: 14px; */
+
+}
+
+.agree-field-label {
+    display: inline-flex;
+    align-items: center ;
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.check-icon-field {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .check-icon-field {
+    background-color: var(--accent-color);
+    border-width: 0px;
+
 }
 
 .agree-field input {
     margin-right: 7px;
 }
+
 .agree-link {
+    margin-left: 4px;
     color: var(--accent-color);
 }
-
-/* .submit-button {
-    min-width: 200px;
-    height: 50px;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.875;
-    letter-spacing: 0.06em;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    color: var(--white-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: var(--accent-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.submit-button:hover, .submit-button:focus {
-    background-color: var(--accent-2-color);
-} */
-
-
-/* 
-.input-area {
-
-}
-
-.input-field label {
-    font-size: 12px;
-    line-height: 1.167;
-    letter-spacing: 0.01em;
-    margin-bottom: 10px;
-}
-.input-area input {
-    font-size: 16px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-} */
-
-
-
-/* .form-field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .form-field label {
-    margin-bottom: 5px;
-  }
-  
-  .form-field input {
-    margin: 0;
-    padding: 10px 20px;
-    border-radius: 3px;
-    border: 1px solid #2a2a2a;
-  } */
-
 /* Модальное окно конец */
