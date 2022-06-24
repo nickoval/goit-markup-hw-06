@@ -55,7 +55,8 @@ html {
   }
 
 body {
-    padding-top: 80px;
+    /* Для фиксированого header-а */
+    /* padding-top: 80px; */
 
     font-family: var(--main-font);
     font-size: 14px;
@@ -109,15 +110,15 @@ img {
 
 /* !!!    Хэдэр начало   !!! */
 .page-header {
-    position: fixed;
-    width: 100%;
+    /* Для фиксированого header-а */
+    /* position: fixed; */
+    /* width: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 10; */
 
     border-bottom: 1px solid var(--header-border-color);
     background-color: var(--white-color);
-
 }
 
 .page-header .container{
@@ -626,25 +627,27 @@ nav {
     background-color: var(--accent-2-color);
 }
 
-.footer-button .icon-out {
+/* .footer-button .icon-out {
     transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 .footer-button .icon-in {
     position: absolute;
-    right: 27px ;
+    right: 28px ;
     transform: translate(-40px, 40px);
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 
 .footer-button:hover .icon-out,
 .footer-button:focus .icon-out {
     transform: translate(40px, -40px);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-button:hover .icon-in,
 .footer-button:focus .icon-in {
     transform: translateY(0);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -796,9 +799,9 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 .modal {
     position: absolute;
     width: 528px;
-    /* min-height: 581px; */
     top: 50%;
     left: 50%;
+    padding: 40px;
     
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -822,7 +825,18 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
     color: var(--black-color);
     background-color: transparent;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.close-modal-button:hover,
+.close-modal-button:focus {
+    color: var(--accent-color);
+}
+
+/* .close-modal-button:focus {
+    outline: 1px dotted var(--accent-color);
+} */
+
 .close-modal-button .icon {
     fill: currentColor;
 }
@@ -830,7 +844,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 /* Контактная Форма */
 .contacts-form {
-    padding: 40px;
+    /* padding: 40px; */
     text-align: center;
 }
 
@@ -899,7 +913,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-field:hover + .input-icon {
+.input-field:hover + .input-icon,
+.input-field:focus +.input-icon {
     fill: var(--accent-color);
 }
 
@@ -972,7 +987,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 
 .checkbox:focus-within  + .check-icon-field {
-    outline: 2px solid var(--accent-color);
+    outline: 1px solid var(--accent-color);
 }
 
 
