@@ -632,7 +632,7 @@ nav {
 } */
 .footer-button .icon-in {
     position: absolute;
-    right: 28px ;
+    right: 27px ;
     transform: translate(-40px, 40px);
     /* transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
@@ -896,6 +896,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     padding-left: 42px;
     background-color: transparent;
     cursor: pointer;
+    color: var(--title-text-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
@@ -938,6 +939,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     border-radius: 4px;
     background-color: transparent;
     cursor: pointer;
+    color: var(--title-text-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
